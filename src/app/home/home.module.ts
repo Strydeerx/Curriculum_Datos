@@ -6,6 +6,8 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { NyapComponent } from './nyap/nyap.component';
+import { ImagenComponent } from './imagen/imagen.component';
+
 
 
 @NgModule({
@@ -15,6 +17,6 @@ import { NyapComponent } from './nyap/nyap.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage,NyapComponent]
+  declarations: [HomePage,NyapComponent,ImagenComponent]
 })
 export class HomePageModule {}
