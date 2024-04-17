@@ -1,3 +1,49 @@
-<p>
- Modulo nombres y Apellidos
-</p>
+<ion-app>
+    <ion-content>
+      <div></div>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Contactos</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <form>
+            <ion-item>
+                <ion-label position="floating">Escriba un numero de telefono</ion-label>
+                <ion-input type="numero" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Escriba un numero de casa</ion-label>
+                <ion-input type="numerocasa" required></ion-input>
+              </ion-item>
+              <ion-card-header>
+                <ion-card-title>Domicilio</ion-card-title>
+              </ion-card-header>
+              <ion-item>
+                <ion-label position="floating">Calle</ion-label>
+                <ion-input type="domicilio" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">N.Exterior</ion-label>
+                <ion-input type="domicilio" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">N.Interior</ion-label>
+                <ion-input type="domicilio" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Colonia</ion-label>
+                <ion-input type="domicilio" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Codigo postal</ion-label>
+                <ion-input type="domicilio" required></ion-input>
+              </ion-item>
+            <ion-button color= "success">Success</ion-button>
+            <ion-button color="primary">Primary</ion-button>
+          </form>
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+  </ion-app>
+
+
