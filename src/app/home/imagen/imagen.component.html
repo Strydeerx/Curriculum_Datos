@@ -1,31 +1,44 @@
-<!-- imagen.component.html -->
-
-
 <ion-app>
 <div></div>
 <ion-content class="ion-padding">
   <form (ngSubmit)="onSubmit()">
-
     <ion-item>
       <ion-label position="stacked">Seleccionar Foto</ion-label>
       <input type="file" (change)="onFileSelected($event)" accept="image/*" />
     </ion-item>
     <ion-item *ngIf="imageUrl">
       <img [src]="imageUrl" style="max-width: 7%; height: auto;" alt="Vista previa de la imagen seleccionada" />
-    </ion-item>-
-
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Nombre(s)</ion-label>
+      <ion-input type="text"   name="fileName" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Apellido paterno</ion-label>
+      <ion-input type="text"  name="fileName" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Apellido materno</ion-label>
+      <ion-input type="text"   name="fileName" required></ion-input>
+    </ion-item>
     <ion-item>
       <ion-label position="stacked">E-mail</ion-label>
       <ion-input type="text"   name="fileName" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="stacked">Telefono</ion-label>
+      <ion-label position="stacked">Telefono personal</ion-label>
       <ion-input type="text"  name="fileName" required></ion-input>
     </ion-item>
-    
-
-
-  
+    <ion-item>
+      <ion-label position="stacked">Telefono de casa</ion-label>
+      <ion-input type="text"  name="fileName" required></ion-input>
+    </ion-item>
+      <label for="opciones">Genero:</label>
+      <select id="opciones" name="Genero">
+          <option value="opcion1">Masculino</option>
+          <option value="opcion2">Femenino</option>
+          <option value="opcion3">Otro</option>
+      </select>
   </form>
 </ion-content>
 </ion-app>
