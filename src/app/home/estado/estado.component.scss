@@ -1,6 +1,72 @@
-.mi-clase-margen {
-    ion-margin: 20px;
+// Estilos para el contenedor del cuadro centrado
+.contenedor-cuadro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000px; // Altura del cuadro
+  background-color: #f0f0f0; // Color de fondo del cuadro
+  border-radius: 10px; // Radio de borde del cuadro
+  margin: 20px; // Margen exterior del cuadro
+}
+
+// Estilos para el contenido dentro del cuadro
+.contenido {
+  text-align: center;
+  padding: 20px; // Espaciado interno del contenido
+}
+ion-header {
+  ion-toolbar {
+    ion-title {
+      font-size: 24px; // Tamaño de fuente del título del encabezado
+    }
   }
-  
-  
-  
+}
+
+// Estilos para el formulario
+form {
+  ion-item {
+    ion-label {
+      font-weight: bold; // Hace que el texto de la etiqueta sea negrita
+    }
+    ion-select {
+      max-width: 300px; // Define el ancho máximo del select
+    }
+  }
+}
+
+// Estilos para el margen
+.mi-clase-margen {
+  margin-top: 20px; // Ajusta el margen superior del elemento
+}
+
+// Estilos para la fecha de nacimiento
+ion-header:last-child {
+  ion-toolbar {
+    ion-title {
+      font-size: 20px; // Tamaño de fuente del título del último encabezado
+    }
+  }
+  ion-item {
+    ion-label {
+      font-weight: bold; // Hace que el texto de la etiqueta sea negrita
+    }
+    ion-datetime {
+      max-width: 300px; // Define el ancho máximo del ion-datetime
+    }
+  }
+}
+.contenedor-cuadro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000px; // Altura del cuadro
+  background-color: #b11919; // Color de fondo del cuadro
+  border-radius: 10px; // Radio de borde del cuadro
+  margin: 20px; // Margen exterior del cuadro
+}
+
+// Estilos para el contenido dentro del cuadro
+.contenido {
+  text-align: center;
+  padding: 20px; // Espaciado interno del contenido
+}
