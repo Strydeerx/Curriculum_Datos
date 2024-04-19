@@ -1,9 +1,14 @@
 <link rel="stylesheet" href="imagen.component.scss">
-<ion-app>
+
   <div></div>
-  <ion-content class="ion-padding">
-    
+  
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Datos Personales</ion-title>
+    </ion-toolbar>
+  </ion-header>
       <div id="estilo">
+        
 
         <form  [formGroup]="perfilForm" >
           <ion-item>
@@ -13,7 +18,7 @@
           <ion-item *ngIf="imageUrl">
             <img [src]="imageUrl" style="max-width: 7%; height: auto;" alt="Vista previa de la imagen seleccionada" />
           </ion-item>
-          <ion-item>
+          <ion-item class="campo">
             <ion-label position="stacked">Nombre(s)</ion-label>
             <ion-input type="text"    required formControlName="name" ></ion-input>
           </ion-item>
@@ -46,5 +51,4 @@
         </form>
       </div>
         
-    </ion-content>
-  </ion-app>
+  

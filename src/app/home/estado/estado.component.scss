@@ -11,6 +11,7 @@
 
 // Estilos para el contenido dentro del cuadro
 .contenido {
+  
   text-align: center;
   padding: 20px; // Espaciado interno del contenido
 }
@@ -60,7 +61,7 @@ ion-header:last-child {
   justify-content: center;
   align-items: center;
   height: 1000px; // Altura del cuadro
-  background-color: #b11919; // Color de fondo del cuadro
+  // Color de fondo del cuadro
   border-radius: 10px; // Radio de borde del cuadro
   margin: 20px; // Margen exterior del cuadro
 }

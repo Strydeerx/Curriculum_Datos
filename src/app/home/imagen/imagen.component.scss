@@ -3,11 +3,15 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-
+font-size: 20px;
     padding: 20px;
+    height: 1000px; // Altura del cuadro
+    background-color: #f0f0f0; // Color de fondo del cuadro
+    border-radius: 10px; // Radio de borde del cuadro
+    margin: 20px; // Margen exterior del cuadro
 }
 ion-item{
-    padding: 20px;
+    padding: 30px;
     margin: auto;
 }
 
@@ -37,3 +41,27 @@ ion-item{
     transition: all 0.25s ease;
 }
 
+
+ion-label{
+    font-weight: bold;
+    
+}
+
+ion-header{
+    text-align: center;
+  
+    
+}
+
+ion-header {
+    
+    ion-toolbar {
+        
+      ion-title {
+        font-size: 24px; // Tamaño de fuente del título del encabezado
+        font-weight: bold;
+       
+      
+      }
+    }
+  }
