@@ -1,2 +1,40 @@
+/* Estilos para los inputs */
+ion-input {
 
- 
+    --color: #ffffff; /* Texto blanco */
+    --border-color: #333333; /* Borde oscuro */
+    --border-radius: 5px; /* Esquinas redondeadas */
+    --padding-end: 10px; /* Espaciado interno */
+    --padding-start: 10px; /* Espaciado interno */
+  }
+  ion-card {
+  background-color: #252525; /* Fondo blanco */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilos para el encabezado de la tarjeta */
+ion-card-header {
+  background-color: #1d1c1c; /* Fondo gris claro */
+  border-bottom: 1px solid #1b1b1b; /* Borde inferior gris claro */
+}
+
+/* Estilos para el contenido de la tarjeta */
+ion-card-content {
+  color: #333333; /* Texto oscuro */
+}
+
+/* Estilos para los botones */
+ion-button {
+  --background: #4caf50; /* Fondo verde */
+  --color: #ffffff; /* Texto blanco */
+  --border-radius: 20px; /* Esquinas redondeadas */
+  --padding-end: 20px; /* Espaciado interno */
+  --padding-start: 20px; /* Espaciado interno */
+}
+
+/* Estilos para las etiquetas */
+ion-label {
+  color: #555555; /* Texto gris oscuro */
+}

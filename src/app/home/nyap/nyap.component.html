@@ -1,49 +1,171 @@
 <ion-app>
-    <ion-content>
+    <ion-content class="ion-color-light">
       <div></div>
       <ion-card>
         <ion-card-header>
-          <ion-card-title>Contactos</ion-card-title>
+          <ion-card-title>Numeros de referencia</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <form>
+          <form [formGroup]="ContactForm">
             <ion-item>
-                <ion-label position="floating">Escriba un numero de telefono</ion-label>
-                <ion-input type="numero" required></ion-input>
+                <ion-label position="floating" >Contacto 1</ion-label>
+                <ion-input formControlName="conta" type="numero1" required></ion-input>
+                <ion-label color="danger" *ngIf="ContactForm.hasError ('pattern','conta')">Se requiere un telefono valido</ion-label>
+                <ion-label color="danger" *ngIf="ContactForm.hasError ('minlength','conta')">Solo 10 caracteres</ion-label>
+                <ion-label color="danger" *ngIf="ContactForm.hasError ('maxlength','conta')">Solo 10 caracteres</ion-label>
+                
               </ion-item>
               <ion-item>
-                <ion-label position="floating">Escriba un numero de casa</ion-label>
-                <ion-input type="numerocasa" required></ion-input>
+                <ion-label position="floating">Contacto 2</ion-label>
+                <ion-input formControlName="conta1" type="numero2" required></ion-input>
+                <ion-label color="danger" *ngIf="ContactForm.hasError ('pattern','conta1')">Se requiere un telefono valido</ion-label>
+                <ion-label color="danger" *ngIf="ContactForm.hasError ('minlength','conta1')">Solo 10 caracteres</ion-label>
+                <ion-label color="danger" *ngIf="ContactForm.hasError ('maxlength','conta1')">Solo 10 caracteres</ion-label>
+                
               </ion-item>
+              <ion-item>
+                <ion-label position="floating">Contacto 3 (opcional)</ion-label>
+                <ion-input formControlName="conta2" type="numero3" required></ion-input>
+                <ion-label color="danger" *ngIf="ContactForm.hasError ('pattern','conta2')">Se requiere un telefono valido</ion-label>
+                <ion-label color="danger" *ngIf="ContactForm.hasError ('minlength','conta2')">Solo 10 caracteres</ion-label>
+                <ion-label color="danger" *ngIf="ContactForm.hasError ('maxlength','conta2')">Solo 10 caracteres</ion-label>
+                
+                <ion-card-header>
+                  <ion-card-title>Contactos</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                  
+                    <ion-item>
+                        <ion-label position="floating">Escriba un numero de telefono</ion-label>
+                        <ion-input formControlName="numtel" type="numero" required></ion-input>
+                        <ion-label color="danger" *ngIf="ContactForm.hasError ('pattern','numtel')">Se requiere un telefono valido</ion-label>
+                        <ion-label color="danger" *ngIf="ContactForm.hasError ('minlength','numtel')">Solo 10 caracteres</ion-label>
+                        <ion-label color="danger" *ngIf="ContactForm.hasError ('maxlength','numtel')">Solo 10 caracteres</ion-label>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label position="floating">Escriba un numero de casa</ion-label>
+                        <ion-input formControlName="numcel" type="numerocasa" required></ion-input>
+                        <ion-label color="danger" *ngIf="ContactForm.hasError ('pattern','numcel')">Se requiere un telefono valido</ion-label>
+                        <ion-label color="danger" *ngIf="ContactForm.hasError ('minlength','numcel')">Solo 10 caracteres</ion-label>
+                        <ion-label color="danger" *ngIf="ContactForm.hasError ('maxlength','numcel')">Solo 10 caracteres</ion-label>
+                      </ion-item>
+                      <ion-card-header>
+                        <ion-card-title>Domicilio</ion-card-title>
+                      </ion-card-header>
+                      <ion-item>
+                        <ion-item>
+                          <ion-label>Estado</ion-label>
+                          <ion-select interface="popover" name="estado" ngModel required>
+                            <ion-select-option value="Aguascalientes">Aguascalientes</ion-select-option>
+                            <ion-select-option value="Baja California">Baja California</ion-select-option>
+                            <ion-select-option value="Baja California Sur">Baja California Sur</ion-select-option>
+                            <ion-select-option value="Campeche">Campeche</ion-select-option>
+                            <ion-select-option value="Chiapas">Chiapas</ion-select-option>
+                            <ion-select-option value="Chihuahua">Chihuahua</ion-select-option>
+                            <ion-select-option value="Coahuila">Coahuila</ion-select-option>
+                            <ion-select-option value="Colima">Colima</ion-select-option>
+                            <ion-select-option value="Ciudad de México">Ciudad de México</ion-select-option>
+                            <ion-select-option value="Durango">Durango</ion-select-option>
+                            <ion-select-option value="Guanajuato">Guanajuato</ion-select-option>
+                            <ion-select-option value="Guerrero">Guerrero</ion-select-option>
+                            <ion-select-option value="Hidalgo">Hidalgo</ion-select-option>
+                            <ion-select-option value="Jalisco">Jalisco</ion-select-option>
+                            <ion-select-option value="México">México</ion-select-option>
+                            <ion-select-option value="Michoacán">Michoacán</ion-select-option>
+                            <ion-select-option value="Morelos">Morelos</ion-select-option>
+                            <ion-select-option value="Nayarit">Nayarit</ion-select-option>
+                            <ion-select-option value="Nuevo León">Nuevo León</ion-select-option>
+                            <ion-select-option value="Oaxaca">Oaxaca</ion-select-option>
+                            <ion-select-option value="Puebla">Puebla</ion-select-option>
+                            <ion-select-option value="Querétaro">Querétaro</ion-select-option>
+                            <ion-select-option value="Quintana Roo">Quintana Roo</ion-select-option>
+                            <ion-select-option value="San Luis Potosí">San Luis Potosí</ion-select-option>
+                            <ion-select-option value="Sinaloa">Sinaloa</ion-select-option>
+                            <ion-select-option value="Sonora">Sonora</ion-select-option>
+                            <ion-select-option value="Tabasco">Tabasco</ion-select-option>
+                            <ion-select-option value="Tamaulipas">Tamaulipas</ion-select-option>
+                            <ion-select-option value="Tlaxcala">Tlaxcala</ion-select-option>
+                            <ion-select-option value="Veracruz">Veracruz</ion-select-option>
+                            <ion-select-option value="Yucatán">Yucatán</ion-select-option>
+                            <ion-select-option value="Zacatecas">Zacatecas</ion-select-option>
+                          </ion-select>
+                        </ion-item>
+                        
+                        <ion-item>
+                          <ion-label>Municipio</ion-label>
+                          <ion-select interface="popover" name="municipio" ngModel required>
+                            <ion-select-option value="Amecameca">Amecameca</ion-select-option>
+                            <ion-select-option value="Atizapán de Zaragoza">Atizapán de Zaragoza</ion-select-option>
+                            <ion-select-option value="Chalco">Chalco</ion-select-option>
+                            <ion-select-option value="Cuautitlán Izcalli">Cuautitlán Izcalli</ion-select-option>
+                            <ion-select-option value="Ecatepec de Morelos">Ecatepec de Morelos</ion-select-option>
+                            <ion-select-option value="Huixquilucan">Huixquilucan</ion-select-option>
+                            <ion-select-option value="Naucalpan de Juárez">Naucalpan de Juárez</ion-select-option>
+                            <ion-select-option value="Nezahualcóyotl">Nezahualcóyotl</ion-select-option>
+                            <ion-select-option value="Tecámac">Tecámac</ion-select-option>
+                            <ion-select-option value="Toluca">Toluca</ion-select-option>
+                            <ion-select-option value="Tlalnepantla de Baz">Tlalnepantla de Baz</ion-select-option>
+                            <ion-select-option value="Valle de Bravo">Valle de Bravo</ion-select-option>
+                            <ion-select-option value="Zumpango">Zumpango</ion-select-option>
+                          </ion-select>
+                        </ion-item>
+                        
+                    </ion-item>
+                      <ion-item>
+                        <ion-label position="floating">Calle</ion-label>
+                        <ion-input type="domicilio" required></ion-input>
+                        
+                      </ion-item>
+                      <ion-item>
+                        <ion-label position="floating">Entre calle:</ion-label>
+                        <ion-input type="domicilio" required></ion-input>
+                        
+                      </ion-item>
+                      <ion-item>
+                        <ion-label position="floating">Y calle</ion-label>
+                        <ion-input type="domicilio" required></ion-input>
+                        
+                      </ion-item>
+                      <ion-item>
+                        <ion-label position="floating">N.Exterior</ion-label>
+                        <ion-input formControlName="numext" type="domicilio" required></ion-input>
+                        <ion-label color="danger" *ngIf="ContactForm.hasError ('pattern','numext')">Se requiere un numero valido</ion-label>
+
+                      </ion-item>
+                      <ion-item>
+                        <ion-label position="floating">N.Interior</ion-label>
+                        <ion-input formControlName="numint" type="domicilio" required></ion-input>
+                        <ion-label color="danger" *ngIf="ContactForm.hasError ('pattern','numint')">Se requiere un numero valido</ion-label>
+
+                      </ion-item>
+                      <ion-item>
+                        <ion-label position="floating">Colonia</ion-label>
+                        <ion-input type="domicilio" required></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label position="floating">Codigo postal</ion-label>
+                        <ion-input formControlName="numcod" type="domicilio" required></ion-input>
+                        <ion-label color="danger" *ngIf="ContactForm.hasError ('pattern','cumcod')">Se requiere un Codigo valido</ion-label>
+                        <ion-label color="danger" *ngIf="ContactForm.hasError ('minlength','cumcod')">Solo 5 caracteres</ion-label>
+                        <ion-label color="danger" *ngIf="ContactForm.hasError ('maxlength','cumcod')">Solo 5 caracteres</ion-label>
+                      
+                      </ion-item>
+
+             
               <ion-card-header>
-                <ion-card-title>Domicilio</ion-card-title>
+                <ion-card-title>Informacion adcional (opcional)</ion-card-title>
               </ion-card-header>
               <ion-item>
-                <ion-label position="floating">Calle</ion-label>
-                <ion-input type="domicilio" required></ion-input>
+                <ion-label position="floating"></ion-label>
+                <ion-input formControlName="infoa" type="domicilio" required></ion-input>
+                <ion-label color="danger" *ngIf="ContactForm.hasError ('pattern','infoa')">No se permiten caracteres especiales</ion-label>
+                
+
               </ion-item>
-              <ion-item>
-                <ion-label position="floating">N.Exterior</ion-label>
-                <ion-input type="domicilio" required></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="floating">N.Interior</ion-label>
-                <ion-input type="domicilio" required></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="floating">Colonia</ion-label>
-                <ion-input type="domicilio" required></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label position="floating">Codigo postal</ion-label>
-                <ion-input type="domicilio" required></ion-input>
-              </ion-item>
-            <ion-button color= "success">Success</ion-button>
-            <ion-button color="primary">Primary</ion-button>
-          </form>
+          
         </ion-card-content>
-      </ion-card>
-    </ion-content>
-  </ion-app>
+    
+  
+  
 
 
